@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Asoes</string>
+    <string name="TexView">Selecciona asesoría</string>
+    <string name="Button">Buscar</string>
+    <string name="PlainText">Buscar</string>
+    <string name="texView2"> hola  </string>
+</resources>
