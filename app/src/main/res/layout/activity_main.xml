@@ -6,65 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv1"
+    <Button
+        android:id="@+id/bt_DarBaja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/TexView"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/lv1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.491" />
-
-    <ListView
-        android:id="@+id/lv1"
-        android:layout_width="364dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="47dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btBu" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="302dp"
-        android:layout_height="171dp"
-        android:layout_marginStart="56dp"
         android:layout_marginBottom="76dp"
-        android:text="@string/texView2"
+        android:onClick="bajas"
+        android:text="@string/bt_DarBaja"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lv1" />
-
-    <Button
-        android:id="@+id/btBu"
-        android:layout_width="105dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="157dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="22dp"
-        android:text="@string/Button"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/lv1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tx1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/tx1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="141dp"
-        android:layout_marginEnd="4dp"
+        android:id="@+id/txt_Asesoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/PlainText"
-        app:layout_constraintBottom_toBottomOf="@+id/btBu"
-        app:layout_constraintEnd_toStartOf="@+id/btBu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btBu" />
+        android:text="@string/txt_Asesoria"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Docente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Docente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_Docente"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Horario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_Horario"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_Link"
+        app:layout_constraintBottom_toTopOf="@+id/txt_link2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Registrar"
+        android:text="@string/bt_Agregar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Consultar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Consultar"
+        android:layout_width="137dp"
+        android:layout_height="45dp"
+        android:onClick="Consultar"
+        android:text="@string/bt_Consultar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Modificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Asesoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="modificar"
+        android:text="@string/bt_Modificar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_DarBaja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_link2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_Link2"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Agregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

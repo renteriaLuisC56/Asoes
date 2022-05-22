@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">Asoes</string>
-    <string name="TexView">Selecciona asesoría</string>
-    <string name="Button">Buscar</string>
-    <string name="PlainText">Buscar</string>
-    <string name="texView2"> hola  </string>
+    <string name="txt_codigo">No.Asesoria</string>
+    <string name="txt_Asesoria">Asesoria</string>
+    <string name="txt_Docente">Instructor</string>
+    <string name="txt_Horario">Horario</string>
+    <string name="txt_Link">Link asesoria</string>
+    <string name="txt_Link2">Link recursos</string>
+
+    <string name="bt_Agregar">Agregar</string>
+    <string name="bt_Consultar">Consultar</string>
+    <string name="bt_Modificar">Modificar</string>
+    <string name="bt_DarBaja">Dar Baja</string>
 </resources>
