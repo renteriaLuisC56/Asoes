@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Button;
 
 public class Login extends AppCompatActivity {
-    TextView txtReg;
+    TextView txtReg,txtContra;
     Button btnEntrar;
 
     @Override
@@ -18,13 +18,15 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         txtReg = (TextView)findViewById(R.id.lblRegistro);
+        txtContra = (TextView)findViewById(R.id.lblContraseña);
+        //Event registry
         txtReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openRegister();
             }
         });
-
+        //Event main
         btnEntrar = (Button)findViewById(R.id.btnEntrar);
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +34,14 @@ public class Login extends AppCompatActivity {
                 openMain();
             }
         });
-
+        //Event Password
+        txtContra =(TextView)findViewById(R.id.lblContraseña);
+        txtContra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRecuperaPass();
+            }
+        });
 
     }
     public void openRegister(){
@@ -43,6 +52,11 @@ public class Login extends AppCompatActivity {
     public void openMain(){
 
         Intent a = new Intent(this,MainActivity.class);
+        startActivity(a);
+    }
+    public void openRecuperaPass(){
+
+        Intent a = new Intent(this,recuperaPassword.class);
         startActivity(a);
     }
 
