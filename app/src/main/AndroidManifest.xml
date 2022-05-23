@@ -31,7 +31,7 @@
             android:name=".registro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityLuis"
             android:exported="false" />
         <activity
             android:name=".Login"

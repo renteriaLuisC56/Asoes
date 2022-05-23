@@ -1,175 +1,59 @@
 package com.example.asoes;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private EditText txt_codigo,txt_Asesoria,txt_Docente,txt_Horario,txt_Link,txt_link2;
+    private EditText etxt_Materia;
+    private EditText etxt_Tema;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_codigo=(EditText) findViewById(R.id.txt_Codigo);
-        txt_Asesoria=(EditText) findViewById(R.id.txt_Asesoria);
-        txt_Docente=(EditText) findViewById(R.id.txt_Docente);
-        txt_Horario=(EditText) findViewById(R.id.txt_Horario);
-        txt_Link=(EditText) findViewById(R.id.txt_Link);
-        txt_link2=(EditText) findViewById(R.id.txt_link2);
+        etxt_Materia = (EditText)findViewById(R.id.etxt_Materia);
+        etxt_Tema = (EditText)findViewById(R.id.etxt_Tema);
+    }
 
+    public void asesoriaE(View view) { //Sirve para cambiar a la pantalla de la asesoria especifica
+
+            Intent intent = new Intent(this, MainActivity2_AsesoriaE.class);
+            startActivity(intent);
+            finish();
 
     }
 
+    public void asesoria(View view) { //Sirve para cambiar a la pantalla en la que se busca una asesoria
+        String materia = etxt_Materia.getText().toString();
+        String tema = etxt_Tema.getText().toString();
 
-    public void Registrar(View view){
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"Asoes",null,2);
-        SQLiteDatabase BaseDeDatos =admin.getWritableDatabase();
+        if(materia.equals("") || tema.equals("")) { //Si los campos de materia y tema estan vacios no puede cambiar de pantalla
 
-        String codigo=txt_codigo.getText().toString();
-        String asesoria=txt_Asesoria.getText().toString();
-        String docente=txt_Docente.getText().toString();
-        String horario=txt_Horario.getText().toString();
-        String link=txt_Link.getText().toString();
-        String rec=txt_link2.getText().toString();
+            Toast.makeText(this, "Debes Llenar Todos Los Campos", Toast.LENGTH_SHORT).show();
+            etxt_Materia.requestFocus();
+            InputMethodManager imm = (InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(etxt_Materia, InputMethodManager.SHOW_IMPLICIT);
 
-        if(!codigo.isEmpty() && !asesoria.isEmpty() && !docente.isEmpty() && !horario.isEmpty() && !link.isEmpty() && !rec.isEmpty()){
-            ContentValues registro=new ContentValues();
+        } else { //Si los campos estan llenos cambia buscar la asesoria con el tema solicitado
 
-            registro.put("Id_Asesoria",codigo);
-            registro.put("Asignatura",asesoria);
-            registro.put("Docente",docente);
-            registro.put("Horario",horario);
-            registro.put("Link",link);
-            registro.put("recurso",rec);
+            Toast.makeText(this, "BUSCANDO ASESORIA", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity3_asesoria.class);
+            startActivity(intent);
+            finish();
 
-            BaseDeDatos.insert("asesoria",null,registro);
-
-            BaseDeDatos.close();
-            txt_codigo.setText("");
-            txt_Asesoria.setText("");
-            txt_Docente.setText("");
-            txt_Horario.setText("");
-            txt_Link.setText("");
-            txt_link2.setText("");
-
-            Toast.makeText(this,"Registro existoso",Toast.LENGTH_SHORT).show();
-
-
-        }else{
-            Toast.makeText(this,"Se deben llenar todos los campos",Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-
-
-    public void Consultar(View view){
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"Asoes",null,2);
-        SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
-
-        String codigo=txt_codigo.getText().toString();
-
-        if(!codigo.isEmpty()){
-            Cursor fila = BaseDeDatos.rawQuery
-                    ("select Id_Asesoria, Docente, Horario, Link, Asignatura,Recurso from asesoria where Id_Asesoria ="+codigo,null);
-
-            if(fila.moveToFirst()){
-
-                txt_codigo.setText(fila.getString(0));//Id_Asesoria
-                txt_Docente.setText(fila.getString(1));
-                txt_Horario.setText(fila.getString(2));
-                txt_Link.setText(fila.getString(3));
-                txt_Asesoria.setText(fila.getString(4));
-                txt_link2.setText(fila.getString(5)); //recurso
-                BaseDeDatos.close();
-
-            }else{
-                Toast.makeText(this,"Se debe introducir el codigo",Toast.LENGTH_SHORT).show();
-            }
-        }
-
-    }
-
-
-    public void bajas(View view) {
-
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"Asoes",null,2);
-        SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
-
-        String codigo=txt_codigo.getText().toString();
-
-        if(!codigo.isEmpty()) {
-
-            int cantidad=BaseDeDatos.delete("asesoria","Id_Asesoria="+codigo,null);
-            BaseDeDatos.close();
-
-            txt_codigo.setText("");
-            txt_Asesoria.setText("");
-            txt_Docente.setText("");
-            txt_Horario.setText("");
-            txt_Link.setText("");
-            txt_link2.setText("");
-
-            if(cantidad==1) {
-                Toast.makeText(this,"Asesoria dada de baja exitosamente",Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(this,"No existe esa asesoria",Toast.LENGTH_SHORT).show();
-            }
-
-        }else{
-            Toast.makeText(this,"Se debe introducir el codigo",Toast.LENGTH_SHORT).show();
         }
     }
 
-
-
-    public void modificar(View view){
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"Asoes",null,2);
-        SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
-
-        String codigo=txt_codigo.getText().toString();
-        String asesoria=txt_Asesoria.getText().toString();
-        String docente=txt_Docente.getText().toString();
-        String horario=txt_Horario.getText().toString();
-        String link=txt_Link.getText().toString();
-        String rec=txt_link2.getText().toString();
-
-
-        if(!codigo.isEmpty() && !asesoria.isEmpty() && !docente.isEmpty() && !horario.isEmpty() && !link.isEmpty() && !rec.isEmpty()) {
-
-            ContentValues registro=new ContentValues();
-
-            registro.put("Id_Asesoria",codigo);
-            registro.put("Asignatura",asesoria);
-            registro.put("Docente",docente);
-            registro.put("Horario",horario);
-            registro.put("Link",link);
-            registro.put("Recurso",rec);
-
-
-            int cantidad=BaseDeDatos.update("asesoria", registro,"Id_Asesoria="+codigo,null);
-
-            BaseDeDatos.close();
-
-            if(cantidad==1){
-                Toast.makeText(this,"Asesoria modificada correctamente",Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(this,"No existe esa asesoria",Toast.LENGTH_SHORT).show();
-            }
-
-        }else {
-            Toast.makeText(this,"No existe esa asesoria",Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public void onBackPressed() {
 
     }
 }
