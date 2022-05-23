@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
+            android:name=".pantallaPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".recuperaPassword"
             android:exported="false" />
         <activity
