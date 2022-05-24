@@ -51,8 +51,8 @@ public class Login extends AppCompatActivity {
     }
     public void openMain(){
 
-        Intent a = new Intent(this,MainActivity.class);
-        startActivity(a);
+         Intent a = new Intent(this,pantallaPrincipal.class);
+         startActivity(a);
     }
     public void openRecuperaPass(){
 
