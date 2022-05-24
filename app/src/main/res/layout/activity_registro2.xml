@@ -7,7 +7,7 @@
     tools:context=".registro2">
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/txtApellidoPat"
         android:layout_width="311dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/txtApellidoMat"
         android:layout_width="311dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.491" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/txtNombre"
         android:layout_width="311dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -103,7 +103,7 @@
         app:layout_constraintVertical_bias="0.153" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/FechaNacimiento"
         android:layout_width="311dp"
         android:layout_height="53dp"
         android:ems="10"
