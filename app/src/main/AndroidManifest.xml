@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
+            android:name=".AsesoriaFullScreen"
+            android:exported="false" />
+        <activity
             android:name=".Muestra"
             android:exported="false" />
         <activity
