@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.asoes">
 
     <application
@@ -20,6 +21,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity_Asesoria"
+            android:exported="false" />
+        <activity
+            android:name=".UserMain"
+            android:exported="false" />
+        <activity
+            android:name=".AsesoriaFullScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity_AsesoriaE"
@@ -47,9 +54,6 @@
             android:exported="false" />
         <activity
             android:name=".registro"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivityLuis"
             android:exported="false" />
         <activity
             android:name=".Login"
