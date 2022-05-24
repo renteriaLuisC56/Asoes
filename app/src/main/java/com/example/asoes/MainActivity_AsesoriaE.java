@@ -1,5 +1,7 @@
 package com.example.asoes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity2_AsesoriaE extends AppCompatActivity {
+public class MainActivity_AsesoriaE extends AppCompatActivity {
 
     private ListView lv;
     private EditText etxt_id;
@@ -24,13 +24,13 @@ public class MainActivity2_AsesoriaE extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity2_asesoria_e);
+        setContentView(R.layout.activity_main_asesoria_e);
 
         lv = (ListView)findViewById(R.id.lv_historial1);
-        etxt_id = (EditText) findViewById(R.id.etxt_IDAE);
+        etxt_id = (EditText) findViewById(R.id.Numero);
 
         //Sirve para modificar las caracteristicas del ListView (la clase list_item_historial vienen las caracteristicas que puse)
-        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, asesorias);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, asesorias);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -39,11 +39,12 @@ public class MainActivity2_AsesoriaE extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void Regresar(View view) { //Funcion del boton Regresar
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity_Solicitud.class);
         startActivity(intent);
         finish();
 
@@ -62,11 +63,10 @@ public class MainActivity2_AsesoriaE extends AppCompatActivity {
         } else {
 
             Toast.makeText(this, "BUSCANDO ASESORIA", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainActivity3_asesoria.class);
+            Intent intent = new Intent(this, MainActivity_Asesoria.class);
             startActivity(intent);
             finish();
 
         }
     }
-
 }

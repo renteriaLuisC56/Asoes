@@ -1,5 +1,7 @@
 package com.example.asoes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,9 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity4_seleccionP extends AppCompatActivity {
+public class MainActivity_SeleccionP extends AppCompatActivity {
 
     String select = "";
     private ListView lv;
@@ -18,7 +18,7 @@ public class MainActivity4_seleccionP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity4_seleccion_p);
+        setContentView(R.layout.activity_main_seleccion_p);
 
         lv = (ListView)findViewById(R.id.lv_MetodosP);
 
@@ -27,8 +27,8 @@ public class MainActivity4_seleccionP extends AppCompatActivity {
         lv.setAdapter(adapter);
 
         //Creacion del Metodo para cambiar de pantalla
-        Intent intent = new Intent(this, MainActivity5_TarjetaP.class);
-        Intent intent2 = new Intent(this, MainActivity6_AppPago.class);
+        Intent intent = new Intent(this, MainActivity_TarjetaP.class);
+        Intent intent2 = new Intent(this, MainActivity_AppP.class);
 
         //Clase anonima que funciona para saber en que item se hizo clic en el ListView
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -57,10 +57,9 @@ public class MainActivity4_seleccionP extends AppCompatActivity {
 
     public void Regresar(View view) {
 
-        Intent intent = new Intent(this, MainActivity3_asesoria.class);
+        Intent intent = new Intent(this, MainActivity_Asesoria.class);
         startActivity(intent);
         finish();
 
     }
-
 }

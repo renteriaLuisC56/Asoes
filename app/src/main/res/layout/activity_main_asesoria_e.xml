@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_AsesoriaE">
+
+    <TextView
+        android:id="@+id/txtHistorial4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="@string/txtHistorial"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/lv_historial1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloAE6" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:onClick="buscarEspecifica"
+        android:text="@string/btn_Buscar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Numero" />
+
+    <TextView
+        android:id="@+id/txtTituloAE6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/txtTituloAE"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtHistorial4"
+        app:layout_constraintStart_toStartOf="@+id/btn_Regresar10"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar10" />
+
+    <ListView
+        android:id="@+id/lv_historial1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtBuscarPor4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHistorial4" />
+
+    <TextView
+        android:id="@+id/txtBuscarPor4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/txtBuscarPor"
+        app:layout_constraintBottom_toTopOf="@+id/txtIDClase4"
+        app:layout_constraintStart_toStartOf="@+id/txtIDClase4"
+        app:layout_constraintTop_toBottomOf="@+id/lv_historial1" />
+
+    <TextView
+        android:id="@+id/txtIDClase4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="@string/txtIDClase"
+        app:layout_constraintBottom_toTopOf="@+id/Numero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBuscarPor4" />
+
+    <Button
+        android:id="@+id/btn_Regresar10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="23dp"
+        android:onClick="Regresar"
+        android:text="@string/btn_Regresar2"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloAE6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/etxt_IDAE"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIDClase4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

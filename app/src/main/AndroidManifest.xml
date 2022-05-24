@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
+            android:name=".MainActivity_AppP"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_TarjetaP"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_SeleccionP"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_Asesoria"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_AsesoriaE"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_Solicitud"
+            android:exported="false" />
+        <activity
             android:name=".pantallaPrincipal"
             android:exported="false" />
         <activity

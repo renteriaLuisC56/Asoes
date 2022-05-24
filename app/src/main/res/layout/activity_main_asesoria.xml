@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3_asesoria">
+    tools:context=".MainActivity_Asesoria">
+
+    <TextView
+        android:id="@+id/txtTituloAE4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/txtTituloAD"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/lv_AsesoriasD"
+        app:layout_constraintStart_toStartOf="@+id/lv_AsesoriasD"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar8" />
 
     <Button
-        android:id="@+id/btn_Regresar3"
+        android:id="@+id/btn_Regresar8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -15,21 +27,9 @@
         android:layout_marginBottom="26dp"
         android:onClick="Regresar"
         android:text="@string/btn_Regresar3"
-        app:layout_constraintBottom_toTopOf="@+id/txtTituloAE2"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloAE4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtTituloAE2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="12dp"
-        android:text="@string/txtTituloAD"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/lv_AsesoriasD"
-        app:layout_constraintStart_toStartOf="@+id/lv_AsesoriasD"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar3" />
 
     <ListView
         android:id="@+id/lv_AsesoriasD"
@@ -38,36 +38,36 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="33dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloAE2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/txtHorariosD"
-        app:layout_constraintBottom_toTopOf="@+id/spHorarios"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lv_AsesoriasD" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloAE4" />
 
     <Spinner
-        android:id="@+id/spHorarios"
+        android:id="@+id/spHorarios2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="92dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Inscribirse"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Inscribirse2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/txtHorariosD"
+        app:layout_constraintBottom_toTopOf="@+id/spHorarios2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_AsesoriasD" />
 
     <Button
-        android:id="@+id/btn_Inscribirse"
+        android:id="@+id/btn_Inscribirse2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="69dp"
@@ -76,5 +76,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spHorarios" />
+        app:layout_constraintTop_toBottomOf="@+id/spHorarios2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,142 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5_TarjetaP">
+    tools:context=".MainActivity_TarjetaP">
 
     <EditText
-        android:id="@+id/etxt_CP"
+        android:id="@+id/etxt_NoTarjeta2"
         android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_Ciudad"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etxt_Ciudad"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_Direccion"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etxt_Direccion"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
+        android:layout_height="50dp"
         android:layout_marginStart="38dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="38dp"
         android:ems="10"
+        android:hint="@string/etxt_NoTarjeta"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_Titular"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etxt_Titular"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_CS"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etxt_CS"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_Caducidad"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etxt_Caducidad"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_NoTarjeta"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloPT2"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/txtTituloPT"
+        android:id="@+id/txtTituloPT2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
-        android:text="TituloPT"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_TituloPT"
         android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@+id/etxt_NoTarjeta"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar5" />
+        app:layout_constraintStart_toStartOf="@+id/btn_Regresar11"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar11" />
+
+    <EditText
+        android:id="@+id/etxt_Titular2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/etxt_Titular"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_CS2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etxt_CP2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/etxt_CP"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_Ciudad2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etxt_Caducidad2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/etxt_Caducidad"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_NoTarjeta2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btn_Regresar5"
+        android:id="@+id/btn_Pagar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:onClick="Regresar"
+        android:text="@string/btn_Pagar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_CP2"
+        app:layout_constraintVertical_bias="0.372"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etxt_Ciudad2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/etxt_Ciudad"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_Direccion2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_Regresar11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="Regresar"
+        android:text="@string/btn_Regresar5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/etxt_NoTarjeta"
+        android:id="@+id/etxt_CS2"
         android:layout_width="0dp"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="38dp"
         android:ems="10"
-        android:hint="NoTarjeta"
+        android:hint="@string/etxt_CS"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloPT"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/etxt_Caducidad2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/btn_Pagar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/etxt_Direccion2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/etxt_Direccion"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_CP"
-        app:layout_constraintVertical_bias="0.409"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_Titular2"
         tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

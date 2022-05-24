@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Asoes</string>
+    <string name="app_name">ASOES</string>
     <string name="txt_codigo">No.Asesoria</string>
     <string name="txt_Asesoria">Asesoria</string>
     <string name="txt_Docente">Instructor</string>
@@ -11,4 +11,52 @@
     <string name="bt_Consultar">Consultar</string>
     <string name="bt_Modificar">Modificar</string>
     <string name="bt_DarBaja">Dar Baja</string>
+
+    <string name="btn_Asesoria">Buscar Asesoría</string>
+    <string name="btn_Regresar">Regresar</string>
+    <string name="btn_AsesoriaE">Buscar Asesoría Específica</string>
+    <string name="txtTitulo">ASESORÍA</string>
+    <string name="txtTitulo2">Llene los campos para buscar una Asesoría</string>
+    <string name="txtMateria">Ingrese la Materia:</string>
+    <string name="txtTema">Ingrese el Tema:</string>
+    <string name="txtHorario">Ingrese el Horario:</string>
+    <string name="etxt_Materia"></string>
+    <string name="etxt_Tema"></string>
+
+    <string name="btn_Regresar2">Regresar</string>
+    <string name="btn_Buscar">Buscar</string>
+    <string name="txtTituloAE">ASESORÍA ESPECÍFICA</string>
+    <string name="txtHistorial">Historial de Asesorías</string>
+    <string name="txtBuscarPor">Buscar Por:</string>
+    <string name="txtIDClase">ID de la Clase:</string>
+    <string name="etxt_IDAE"></string>
+
+    <string name="btn_Regresar3">Regresar</string>
+    <string name="txtTituloAD">ASESORÍAS DISPONIBLES</string>
+    <string name="txtHorariosD">HORARIOS DISPONIBLES</string>
+    <string name="btn_Inscribirse">INSCRIBIRSE</string>
+
+    <string name="btn_Regresar4">Regresar</string>
+    <string name="txtTituloP">PAGOS</string>
+    <string name="txtTotal">Total a pagar:</string>
+    <string name="txtMetodoP">Seleccione su método de pago:</string>
+
+    <string name="btn_Regresar5">Regresar</string>
+    <string name="txt_TituloPT">PAGO CON TARJETA</string>
+    <string name="etxt_NoTarjeta">No. Tarjeta:</string>
+    <string name="etxt_Caducidad">Caducidad:</string>
+    <string name="etxt_CS">Código de Seguridad:</string>
+    <string name="etxt_Titular">Titular de la Tarjeta:</string>
+    <string name="etxt_Direccion">Dirección:</string>
+    <string name="etxt_Ciudad">Ciudad:</string>
+    <string name="etxt_CP">Código Postal:</string>
+    <string name="btn_Pagar">PAGAR</string>
+
+    <string name="btn_Regresar6">Regresar</string>
+    <string name="txt_TituloPA">PAGO CON APP</string>
+    <string name="txtCorreo">Correo Electrónico:</string>
+    <string name="txtPassword">Contraseña:</string>
+    <string name="etxt_Correo"></string>
+    <string name="etxt_Password"></string>
+    <string name="btn_Pagar2">PAGAR</string>
 </resources>
