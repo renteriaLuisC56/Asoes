@@ -30,7 +30,7 @@ public class MainActivity_AsesoriaE extends AppCompatActivity {
         etxt_id = (EditText) findViewById(R.id.Numero);
 
         //Sirve para modificar las caracteristicas del ListView (la clase list_item_historial vienen las caracteristicas que puse)
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, asesorias);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, asesorias);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

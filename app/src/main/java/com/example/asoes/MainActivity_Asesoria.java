@@ -35,7 +35,7 @@ public class MainActivity_Asesoria extends AppCompatActivity {
                 materiaA+"\nASESOR: LEONEL VAZQUEZ\nID: 789123", materiaA+"\nASESOR: JOSE SOLIS\nID: 456721", materiaA+"\nASESOR: MARCO RODRIGUEZ\nID: 890123"};
 
         //Sirve para modificar las caracteristicas del ListView (la clase list_item_historial vienen las caracteristicas que puse)
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, asesorias);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, asesorias);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
