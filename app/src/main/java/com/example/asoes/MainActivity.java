@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tVDatos =(TextView)findViewById(R.id.tVDatos);
-        button=(Button) findViewById(R.id.button);
+        tVDatos =(TextView)findViewById(R.id.tvD);
+        button=(Button) findViewById(R.id.button11);
         button2=(Button)findViewById(R.id.button2);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(getApplicationContext(),Consultar_ListView.class);
+                Intent a=new Intent(getApplicationContext(),Consulta.class);
                 startActivity(a);
             }
         });
