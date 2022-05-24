@@ -89,5 +89,9 @@ public class pantallaPrincipal extends AppCompatActivity {
         Intent a = new Intent(this,Soprte.class);
         startActivity(a);
     }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 
     }
