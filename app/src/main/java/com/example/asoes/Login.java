@@ -59,9 +59,13 @@ public class Login extends AppCompatActivity {
     startActivity(a);
     }
     public void openMain(){
+        try {
+            Intent a = new Intent(this, pantallaPrincipal.class);
+            startActivity(a);
+        }catch(Exception e){
+            Intent a = new Intent(this,recuperaPassword.class);
+        }
 
-         Intent a = new Intent(this,pantallaPrincipal.class);
-         startActivity(a);
     }
     public void openRecuperaPass(){
 
@@ -77,8 +81,6 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, "Llena el campo de 'Contraseña' por favor", Toast.LENGTH_SHORT).show();
             return false;
         }
-
-
         return true;
     }
 

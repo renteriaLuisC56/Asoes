@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_asesoria_full_screen.xml" value="0.2828125" />
+        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_asesoria_main.xml" value="0.33" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_consulta.xml" value="0.25" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_list_view.xml" value="0.2828125" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro3_profesores.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro_completo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro_completo_profesor.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_user_main.xml" value="0.33" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/list_item_asoes.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/list_item_historial.xml" value="0.2828125" />
         <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_main.xml" value="0.33" />
