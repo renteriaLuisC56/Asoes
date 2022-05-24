@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
-            android:name=".pantallaPrincipal"
+            android:name=".List_View"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta"
             android:exported="false" />
         <activity
             android:name=".recuperaPassword"
@@ -31,7 +34,7 @@
             android:name=".registro"
             android:exported="false" />
         <activity
-            android:name=".MainActivityLuis"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Login"
