@@ -28,7 +28,7 @@ public class registro extends AppCompatActivity {
         txtRegUser=(EditText)findViewById(R.id.txtRegUser);
         txtRegPass=(EditText)findViewById(R.id.txtRegPass);
         txtRegPassConfirm=(EditText)findViewById(R.id.txtRegPassConf);
-        txtRegCorreo=(EditText)findViewById(R.id.txtRegCorreo);
+        //txtRegCorreo=(EditText)findViewById(R.id.txtRegCorreo);
         terminos=(CheckBox)findViewById(R.id.terminos);
 
 

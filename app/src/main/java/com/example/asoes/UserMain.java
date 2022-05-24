@@ -11,7 +11,7 @@ import android.widget.ImageView;
 public class UserMain extends AppCompatActivity {
 
 
-    Button btn,btn1;
+    Button btn,btn1,cerrar;
     ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,14 @@ public class UserMain extends AppCompatActivity {
         btn = (Button)findViewById(R.id.button13);
         btn1 = (Button)findViewById(R.id.button12);
         img = (ImageView)findViewById(R.id.imageView12);
+        cerrar = (Button)findViewById(R.id.cerrar);
+
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLogin();
+            }
+        });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +66,10 @@ public class UserMain extends AppCompatActivity {
 
     void abreSoporte(){
         Intent a = new Intent(this,Soprte.class);
+        startActivity(a);
+    }
+    void goLogin(){
+        Intent a = new Intent(this,Login.class);
         startActivity(a);
     }
 

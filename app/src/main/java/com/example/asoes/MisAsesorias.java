@@ -23,7 +23,7 @@ public class MisAsesorias extends AppCompatActivity {
         });
     }
     void OpenMisCursos(){
-        Intent a = new Intent(this,MisAsesorias.class);
+        Intent a = new Intent(this,pantallaPrincipal.class);
         startActivity(a);
     }
 }
