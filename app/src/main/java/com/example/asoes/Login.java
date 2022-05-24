@@ -57,20 +57,20 @@ public class Login extends AppCompatActivity {
 
     Intent a = new Intent(this,registro2.class);
     startActivity(a);
+        finish();
     }
     public void openMain(){
-        try {
+
             Intent a = new Intent(this, pantallaPrincipal.class);
             startActivity(a);
-        }catch(Exception e){
-            Intent a = new Intent(this,recuperaPassword.class);
-        }
+            finish();
 
     }
     public void openRecuperaPass(){
 
         Intent a = new Intent(this,recuperaPassword.class);
         startActivity(a);
+        finish();
     }
     public boolean camposLlenos(){
 

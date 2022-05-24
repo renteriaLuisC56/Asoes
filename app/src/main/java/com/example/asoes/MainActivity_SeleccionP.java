@@ -62,4 +62,8 @@ public class MainActivity_SeleccionP extends AppCompatActivity {
         finish();
 
     }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

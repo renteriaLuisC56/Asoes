@@ -69,4 +69,8 @@ public class MainActivity_AsesoriaE extends AppCompatActivity {
 
         }
     }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

@@ -3,6 +3,7 @@ package com.example.asoes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 
 public class pantallaPrincipal extends AppCompatActivity {
 
-    ImageView profile;
+    ImageView profile, help;
     Button btnRecomen1,btnRecomen2,btnRecomen3;
     private ImageView imageView;
 
@@ -23,10 +24,17 @@ public class pantallaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_principal);
 
         imageView = (ImageView) findViewById(R.id.imageView10);
+        help =(ImageView)findViewById(R.id.imageView9);
         profile = (ImageView)findViewById(R.id.imageView7);
         btnRecomen1 = (Button)findViewById(R.id.button);
         btnRecomen2 = (Button)findViewById(R.id.button2);
         btnRecomen3 = (Button)findViewById(R.id.button11);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ayuda();
+            }
+        });
 
         btnRecomen1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +85,9 @@ public class pantallaPrincipal extends AppCompatActivity {
         Intent a = new Intent(this,AsesoriaMain.class);
         startActivity(a);
     }
-
+    public void ayuda(){
+        Intent a = new Intent(this,Soprte.class);
+        startActivity(a);
+    }
 
     }

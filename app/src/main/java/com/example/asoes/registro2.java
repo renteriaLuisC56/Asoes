@@ -30,7 +30,7 @@ public class registro2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     if(camposLlenos()) {
-                        Registrar();
+                        //Registrar();
                         OpenRegistroUser();
                     }
             }
@@ -98,12 +98,26 @@ public class registro2 extends AppCompatActivity {
             registro.put("CorreoE",Correo);
 
             BaseDeDatos.insert("personas",null,registro);
+
+            try{
+            Cursor mCursor = BaseDeDatos.rawQuery(
+                    "SELECT * FROM personas WHERE CorreoE= '" + txtRegCorreo2.getText().toString()+ "'", null);
+
+            if (mCursor.moveToFirst()) {
+                idUser = mCursor.getString(0);
+                Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
+            }
+        }catch (Exception e){
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        }
             BaseDeDatos.close();
+
            // Toast.makeText(this,"Registro existoso",Toast.LENGTH_SHORT).show();
         }else{
             //Toast.makeText(this,"Se deben llenar todos los campos",Toast.LENGTH_SHORT).show();
         }
-        getId();
+
+       //getId();
 
     }
 
@@ -112,7 +126,8 @@ public class registro2 extends AppCompatActivity {
             AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Asoes", null, 2);
             SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
             Cursor mCursor = BaseDeDatos.rawQuery(
-                    "SELECT id  FROM  savedstoriestable WHERE CorreoE= '" + txtRegCorreo2 + "'", null);
+                    "SELECT Id_persona FROM personas WHERE CorreoE= '" + txtRegCorreo2.getText().toString()+ "'", null);
+
             if (mCursor.moveToFirst()) {
                 idUser = mCursor.getString(0);
                 Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();

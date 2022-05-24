@@ -4,140 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AsesoriaMain">
+    tools:context=".MisAsesorias">
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:rotationY="-178"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <TextView
-        android:id="@+id/textView81"
+        android:id="@+id/textView89"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VACIO"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
-    <TextView
-        android:id="@+id/textView80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CUPOS DISPONIBLES"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VACIO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.437" />
 
     <TextView
-        android:id="@+id/textView79"
+        android:id="@+id/textView93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VACIO"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <TextView
-        android:id="@+id/textView78"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VACIO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
-
-    <TextView
-        android:id="@+id/textView77"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VACIO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
-
-    <TextView
-        android:id="@+id/textView76"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VACIO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
-
-    <TextView
-        android:id="@+id/textView74"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DOCENTE"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
-
-    <TextView
-        android:id="@+id/textView73"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="COSTO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
-
-    <TextView
-        android:id="@+id/textView72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HORARIO"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
-
-    <TextView
-        android:id="@+id/textView71"
+        android:id="@+id/textView97"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ASIGNATURA"
@@ -147,10 +56,88 @@
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <TextView
-        android:id="@+id/textView70"
+        android:id="@+id/textView94"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOCENTE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VACIO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/textView96"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HORARIO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776" />
+
+    <TextView
+        android:id="@+id/textView87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VACIO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <TextView
+        android:id="@+id/textView88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LINK"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <TextView
+        android:id="@+id/textView91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VACIO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776" />
+
+    <TextView
+        android:id="@+id/textView98"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ASESORIA"
@@ -163,7 +150,7 @@
         app:layout_constraintVertical_bias="0.437" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView14"
         android:layout_width="271dp"
         android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -174,7 +161,7 @@
         app:srcCompat="@drawable/gris" />
 
     <TextView
-        android:id="@+id/textView64"
+        android:id="@+id/textView99"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ASESORIA"
@@ -186,15 +173,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INSCRIBIRME"
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IR A INICIO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
 </androidx.constraintlayout.widget.ConstraintLayout>

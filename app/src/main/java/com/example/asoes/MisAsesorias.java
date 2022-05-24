@@ -7,23 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class registroCompletoProfesor extends AppCompatActivity {
-    Button entrar;
+public class MisAsesorias extends AppCompatActivity {
+
+    Button a ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_completo_profesor);
-        entrar=(Button)findViewById(R.id.button6);
-        entrar.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_mis_asesorias);
+        a = (Button)findViewById(R.id.button18);
+        a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                entrar();
+                OpenMisCursos();
             }
         });
     }
-
-    void entrar(){
-        Intent a = new Intent(this,pantallaPrincipal.class);
+    void OpenMisCursos(){
+        Intent a = new Intent(this,MisAsesorias.class);
         startActivity(a);
     }
 }

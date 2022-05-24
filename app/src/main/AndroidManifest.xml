@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
+            android:name=".PagoCompletado"
+            android:exported="false" />
+        <activity
+            android:name=".MisAsesorias"
+            android:exported="false" />
+        <activity
+            android:name=".cambiarPassword"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity_AppP"
             android:exported="false" />
         <activity
