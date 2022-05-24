@@ -4,21 +4,39 @@ package com.example.asoes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText txt_codigo,txt_Asesoria,txt_Docente,txt_Horario,txt_Link,txt_link2;
 
+   private TextView tVDatos;
+   private Button button,button2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tVDatos =(TextView)findViewById(R.id.tVDatos);
+        button=(Button) findViewById(R.id.button);
+        button2=(Button)findViewById(R.id.button2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a=new Intent(getApplicationContext(),Consultar_ListView.class);
+                startActivity(a);
+            }
+        });
 
         txt_codigo=(EditText) findViewById(R.id.txt_Codigo);
         txt_Asesoria=(EditText) findViewById(R.id.txt_Asesoria);
@@ -28,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
         txt_link2=(EditText) findViewById(R.id.txt_link2);
 
 
+
+
     }
+
+
 
 
     public void Registrar(View view){
