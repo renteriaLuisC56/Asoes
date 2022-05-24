@@ -29,6 +29,9 @@
             android:name=".UserMain"
             android:exported="false" />
         <activity
+            android:name=".Soprte"
+            android:exported="false" />
+        <activity
             android:name=".AsesoriaFullScreen"
             android:exported="false" />
         <activity
