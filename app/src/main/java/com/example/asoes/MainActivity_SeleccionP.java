@@ -23,8 +23,8 @@ public class MainActivity_SeleccionP extends AppCompatActivity {
         lv = (ListView)findViewById(R.id.lv_MetodosP);
 
         //Caracteristicas del ListView
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, metodos);
-       // lv.setAdapter(adapter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, metodos);
+        lv.setAdapter(adapter);
 
         //Creacion del Metodo para cambiar de pantalla
         Intent intent = new Intent(this, MainActivity_TarjetaP.class);
