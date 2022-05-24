@@ -32,7 +32,7 @@ public class MainActivity_Asesoria extends AppCompatActivity {
         materiaA = getIntent().getStringExtra("dato");
 
         String asesorias [] = {materiaA+"\nASESOR: JOSE ANTONIO\nID: 123456", materiaA+"\nASESOR: BRENDA AVITIA\nID: 456789",
-                materiaA+"\nASESOR: LEONEL VAZQUEZ\nID: 789123", materiaA+"ASESOR: JOSE SOLIS\nID: 456721", materiaA+"\nASESOR: MARCO RODRIGUEZ\nID: 890123"};
+                materiaA+"\nASESOR: LEONEL VAZQUEZ\nID: 789123", materiaA+"\nASESOR: JOSE SOLIS\nID: 456721", materiaA+"\nASESOR: MARCO RODRIGUEZ\nID: 890123"};
 
         //Sirve para modificar las caracteristicas del ListView (la clase list_item_historial vienen las caracteristicas que puse)
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, asesorias);
