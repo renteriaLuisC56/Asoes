@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class registro2 extends AppCompatActivity {
 
     String idUser;
@@ -30,7 +33,7 @@ public class registro2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     if(camposLlenos()) {
-                        //Registrar();
+                        Registrar();
                         OpenRegistroUser();
                     }
             }
@@ -73,68 +76,38 @@ public class registro2 extends AppCompatActivity {
 
         return true;
     }
+//SQLSERVER
+    void Consulta(){
 
+        try{
+            CONEXION conex = new CONEXION();
+            Statement stm = conex.conexion().createStatement();
+            ResultSet rs = stm.executeQuery("SELECT * FROM ASOESPERSONAS");
 
-    public void Registrar(){
-
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"Asoes",null,2);
-        SQLiteDatabase BaseDeDatos =admin.getWritableDatabase();
-
-        String Nombres=txtNombre.getText().toString();
-        String ApellidoPat=txtApePat.getText().toString();
-        String ApellidoMat=txtApeMat.getText().toString();
-        String FechaNacimiento=FechaNac.getText().toString();
-        String Correo=txtRegCorreo2.getText().toString();
-
-
-        if(camposLlenos()){
-            ContentValues registro=new ContentValues();
-
-
-            registro.put("Nombres",Nombres);
-            registro.put("ApePat",ApellidoPat);
-            registro.put("ApeMat",ApellidoMat);
-            registro.put("FechaNac",FechaNacimiento);
-            registro.put("CorreoE",Correo);
-
-            BaseDeDatos.insert("personas",null,registro);
-
-            try{
-            Cursor mCursor = BaseDeDatos.rawQuery(
-                    "SELECT * FROM personas WHERE CorreoE= '" + txtRegCorreo2.getText().toString()+ "'", null);
-
-            if (mCursor.moveToFirst()) {
-                idUser = mCursor.getString(0);
-                Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
+            if(rs.next()){
+                txtNombre.setText(rs.getString(2));
+                txtApePat.setText(rs.getString(3));
+                txtApeMat.setText(rs.getString(4));
+                txtRegCorreo2.setText(rs.getString(5));
+                FechaNac.setText(rs.getString(6));
             }
+
+
         }catch (Exception e){
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error viejo", Toast.LENGTH_SHORT).show();
         }
-            BaseDeDatos.close();
-
-           // Toast.makeText(this,"Registro existoso",Toast.LENGTH_SHORT).show();
-        }else{
-            //Toast.makeText(this,"Se deben llenar todos los campos",Toast.LENGTH_SHORT).show();
-        }
-
-       //getId();
-
     }
 
-    void getId(){
-        try {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Asoes", null, 2);
-            SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-            Cursor mCursor = BaseDeDatos.rawQuery(
-                    "SELECT Id_persona FROM personas WHERE CorreoE= '" + txtRegCorreo2.getText().toString()+ "'", null);
+    void Registrar(){
+        try{
+            CONEXION conex = new CONEXION();
+            Statement stm = conex.conexion().createStatement();
+            ResultSet rs = stm.executeQuery("Insert into ASOESPersonas values ('"+txtNombre.getText().toString()+"','"+txtApePat.getText().toString()+"','"+txtApeMat.getText().toString()+"','"+txtRegCorreo2.getText().toString()+"','"+FechaNac.getText().toString()+"')");
 
-            if (mCursor.moveToFirst()) {
-                idUser = mCursor.getString(0);
-                Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
-            }
         }catch (Exception e){
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+
         }
+
     }
 
 
