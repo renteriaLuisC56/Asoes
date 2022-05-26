@@ -79,9 +79,6 @@ public class registro extends AppCompatActivity {
         }else if(TextUtils.isEmpty(txtRegPassConfirm.getText().toString())){
             Toast.makeText(this, "Repite tu contraseña por favor.", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(TextUtils.isEmpty(txtRegCorreo.getText().toString())){
-            Toast.makeText(this, "Llena el campo de 'Correo' por favor", Toast.LENGTH_SHORT).show();
-            return false;
         }
 
 
