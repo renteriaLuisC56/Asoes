@@ -3,38 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_asesoria_full_screen.xml" value="0.2828125" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_asesoria_main.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_cambiar_password.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_consulta.xml" value="0.25" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_list_view.xml" value="0.2828125" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_activity2_asesoria_e.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_activity3_asesoria.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_activity4_seleccion_p.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_activity6_app_pago.xml" value="0.25" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_app_p.xml" value="0.2151268115942029" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_asesoria.xml" value="0.2151268115942029" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_asesoria_e.xml" value="0.2151268115942029" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_luis.xml" value="0.2828125" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_seleccion_p.xml" value="0.2151268115942029" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_solicitud.xml" value="0.2151268115942029" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_main_tarjeta_p.xml" value="0.18931159420289856" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_mis_asesorias.xml" value="0.2833333333333333" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_pago_completado.xml" value="0.33" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_pantalla_principal.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_recupera_password.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro2.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro3_profesores.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro_completo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_registro_completo_profesor.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_soprte.xml" value="0.5" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/activity_user_main.xml" value="0.33" />
         <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/list_item_asoes.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Elias Ramos/workspace/Asoes/app/src/main/res/layout/list_item_historial.xml" value="0.2828125" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_consulta.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_list_view.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_login.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_main_asesoria.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_main_asesoria_e.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_main_luis.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_mis_asesorias.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_muestra.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/activity_pantalla_principal.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/consulta_list_view.xml" value="0.25" />
         <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/elementos_lista.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Luis C/AndroidStudioProjects/Asoes/app/src/main/res/layout/list_item_asoes.xml" value="0.20416666666666666" />
       </map>
