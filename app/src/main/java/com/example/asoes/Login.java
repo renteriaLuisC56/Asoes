@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     TextView txtReg,txtContra;
-    Button btnEntrar;
+    Button btnEntrar, test;
     EditText txtUser,txtPass;
 
     @Override
@@ -25,6 +25,13 @@ public class Login extends AppCompatActivity {
         txtContra = (TextView)findViewById(R.id.lblContraseña);
         txtUser=(EditText)findViewById(R.id.txtUser);
         txtPass=(EditText)findViewById(R.id.txtPass);
+        test = (Button) findViewById( R.id.button19);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MostrarTest();
+            }
+        });
 
         //Event registry
         txtReg.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +89,11 @@ public class Login extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    void MostrarTest(){
+        Intent a = new Intent(this,Consulta.class);
+        startActivity(a);
     }
 
 

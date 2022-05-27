@@ -56,7 +56,7 @@ consultarLista();
 
             if(rs.next()){
                 tVDatos.setText("Asesoría: "+rs.getString(2)+"\n"+"Instructor: "+rs.getString(3)+"\n"+"Horario: "+rs.getString(4)+"\n"+"Enlace de sesión: "+rs.getString(5)+"\n"+"Recursos didácticos: "+rs.getString(6));
-                tVDatos.setText("------------------------------------------------------------");
+            //    tVDatos.setText("------------------------------------------------------------");
          //       tVDatos.setText(rs.getString(3));
          //       tVDatos.setText(rs.getString(4));
          //       tVDatos.setText(rs.getString(5));
