@@ -9,11 +9,15 @@ import android.widget.Button;
 
 public class MainActivity_TarjetaP extends AppCompatActivity {
 
+    String costo;
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tarjeta_p);
+
+        costo = getIntent().getStringExtra("datoC");
+
         btn = (Button)findViewById(R.id.btn_Pagar2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +30,7 @@ public class MainActivity_TarjetaP extends AppCompatActivity {
     public void Regresar(View view) {
 
         Intent intent = new Intent(this, MainActivity_SeleccionP.class);
+        intent.putExtra("datoC", costo);
         startActivity(intent);
         finish();
 

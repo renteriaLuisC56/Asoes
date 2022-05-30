@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.controls.templates.TemperatureControlTemplate;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity_SeleccionP extends AppCompatActivity {
 
-    String select = "";
+    String select = "", costo;
+    private TextView txtCosto;
     private ListView lv;
     private String metodos [] = {"TARJETA DE CRÉDITO", "TARJETA DE DÉBITO", "PAYPAL", "MERCADO PAGO"};
 
@@ -20,8 +23,12 @@ public class MainActivity_SeleccionP extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_seleccion_p);
 
+        costo = getIntent().getStringExtra("datoC");
+
+        txtCosto = (TextView)findViewById(R.id.txtTOTAL);
         lv = (ListView)findViewById(R.id.lv_MetodosP);
 
+        txtCosto.setText("$" + costo);
         //Caracteristicas del ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_historial, metodos);
         lv.setAdapter(adapter);
@@ -41,11 +48,13 @@ public class MainActivity_SeleccionP extends AppCompatActivity {
                 //Segun el item que haya seleccionado cambiara de pantalla
                 if (select == "TARJETA DE CRÉDITO" || select == "TARJETA DE DÉBITO") {
 
+                    intent.putExtra("datoC", costo);
                     startActivity(intent);
                     finish();
 
                 } else if (select == "PAYPAL" || select == "MERCADO PAGO") {
 
+                    intent2.putExtra("datoC", costo);
                     startActivity(intent2);
                     finish();
 
@@ -57,9 +66,11 @@ public class MainActivity_SeleccionP extends AppCompatActivity {
 
     public void Regresar(View view) {
 
-        Intent intent = new Intent(this, MainActivity_Asesoria.class);
-        startActivity(intent);
-        finish();
+            Intent intent = new Intent(this, MainActivity_Solicitud.class);
+            startActivity(intent);
+            finish();
+
+
 
     }
     @Override

@@ -14,12 +14,12 @@ import android.widget.Toast;
 
 public class MainActivity_AsesoriaE extends AppCompatActivity {
 
+    String materiaID;
     private ListView lv;
     private EditText etxt_id;
 
     //Array para llenar el ListView (es un ejemplo, deberia llenarse desde la base de datos)
-    private String asesorias [] = {"PROGRAMACIÓN\nASESOR: ANGEL OLIVAS\nID:123456", "ALGEBRA\nASESOR: KEYLA PINEDA\nID:123678",
-            "CONTABILIDAD\nASESOR: LUIS RENTERÍA\nID:098125","INGLÉS\nASESOR: ELÍAS RAMOS\nID:876456","ING. SOFTWARE\nASESOR: BRENDA AVITIA\nID:456789"};
+    private String asesorias [] = {"MATERIA: Matematicas\nASESOR: Ricardo Martinez Perez\nID AESORÍA: 1"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,9 @@ public class MainActivity_AsesoriaE extends AppCompatActivity {
         } else {
 
             Toast.makeText(this, "BUSCANDO ASESORIA", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainActivity_Asesoria.class);
+            Intent intent = new Intent(this, MainActivity_Asesoria2.class);
+            materiaID = String.valueOf(etxt_id.getText());
+            intent.putExtra("datoID", materiaID);
             startActivity(intent);
             finish();
 
