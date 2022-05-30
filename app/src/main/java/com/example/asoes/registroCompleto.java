@@ -11,6 +11,7 @@ import com.example.asoes.ui.CurrentUserInfo;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.concurrent.ExecutionException;
 
 public class registroCompleto extends AppCompatActivity {
 
@@ -56,6 +57,22 @@ public class registroCompleto extends AppCompatActivity {
         } catch (Exception e) {
 
         }
+
+
+        try{
+            CONEXION conex1 = new CONEXION();
+            Statement stm1 = conex1.conexion().createStatement();
+            ResultSet rs1 = stm1.executeQuery("SELECT idAlumno FROM ASOESAlumnos order by idAlumno desc");
+            if(rs1.next()) {
+                CurrentUserInfo.idEstudiante = rs1.getString(1);
+            }
+
+        }catch (Exception e ){
+
+
+        }
+
+
 
     }
 }

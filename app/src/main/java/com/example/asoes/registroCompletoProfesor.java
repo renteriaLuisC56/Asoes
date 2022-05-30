@@ -29,7 +29,7 @@ public class registroCompletoProfesor extends AppCompatActivity {
     }
 
     void entrar(){
-        Intent a = new Intent(this,pantallaPrincipal.class);
+        Intent a = new Intent(this,pantallaPrincipalDocente.class);
         startActivity(a);
     }
 
@@ -53,6 +53,19 @@ public class registroCompletoProfesor extends AppCompatActivity {
             }
 
         } catch (Exception e) {
+
+        }
+
+        try{
+            CONEXION conex1 = new CONEXION();
+            Statement stm1 = conex1.conexion().createStatement();
+            ResultSet rs1 = stm1.executeQuery("SELECT idDocente FROM ASOESDocentes order by idDocente desc");
+            if(rs1.next()) {
+                CurrentUserInfo.idDocente = rs1.getString(1);
+            }
+
+        }catch (Exception e ){
+
 
         }
 
