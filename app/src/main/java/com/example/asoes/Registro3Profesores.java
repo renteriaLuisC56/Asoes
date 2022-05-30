@@ -12,7 +12,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.asoes.ui.CurrentUserInfo;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class Registro3Profesores extends AppCompatActivity {
 
@@ -20,6 +26,7 @@ public class Registro3Profesores extends AppCompatActivity {
     Button btnSiguiente;
     CheckBox cb;
     EditText ed;
+    TextView ruta1,ruta2,ruta3,ruta4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +35,19 @@ public class Registro3Profesores extends AppCompatActivity {
         btnSiguiente = (Button)findViewById(R.id.btnSigRegProf);
         cb = (CheckBox)findViewById(R.id.checkBox2);
         ed = (EditText) findViewById(R.id.editTextNumberDecimal);
+
+        //ruta1 = (TextView)findViewById(R.id.textView33);
+        //ruta2 = (TextView)findViewById(R.id.textView34);
+        //ruta3 = (TextView)findViewById(R.id.textView35);
+        //ruta4 = (TextView)findViewById(R.id.textView36);
+
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(cb.isChecked() && (!TextUtils.isEmpty(ed.getText().toString()))) {
+                    Registro();
                     RegistroCompletado();
+                    finish();
                 }else{
                     Toast.makeText(Registro3Profesores.this, "Revisa que los datos esten correctos", Toast.LENGTH_SHORT).show();
                 }
@@ -44,6 +59,17 @@ public class Registro3Profesores extends AppCompatActivity {
     public void RegistroCompletado(){
         Intent a = new Intent(this, registroCompletoProfesor.class);
         startActivity(a);
+
+    }
+    void Registro(){
+
+        try {
+            CONEXION conex1 = new CONEXION();
+            Statement stm1 = conex1.conexion().createStatement();
+            ResultSet rs = stm1.executeQuery("Insert into ASOESDocentes values ('"+ed.getText().toString()+"',"+CurrentUserInfo.idUser+")");
+        }catch (Exception e){
+
+        }
 
     }
     int requestcode=-1;
@@ -58,6 +84,7 @@ public class Registro3Profesores extends AppCompatActivity {
             }
             Uri uri = data.getData();
             Toast.makeText(this, uri.getPath(), Toast.LENGTH_SHORT).show();
+
         }
     }
 

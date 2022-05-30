@@ -35,6 +35,7 @@ public class registro2 extends AppCompatActivity {
                     if(camposLlenos()) {
                         Registrar();
                         OpenRegistroUser();
+                        finish();
                     }
             }
         });
@@ -52,6 +53,7 @@ public class registro2 extends AppCompatActivity {
 
         Intent a = new Intent(this, registro.class);
         startActivity(a);
+
     }
 
     public boolean camposLlenos(){
