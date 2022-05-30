@@ -10,24 +10,21 @@
         android:id="@+id/txtMetodoP2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="18dp"
         android:text="@string/txtMetodoP"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lv_MetodosP"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotal2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_Regresar9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="30dp"
         android:onClick="Regresar"
         android:text="@string/btn_Regresar4"
-        app:layout_constraintBottom_toTopOf="@+id/txtTituloAE5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,35 +32,43 @@
         android:id="@+id/txtTotal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="22dp"
         android:text="@string/txtTotal"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtMetodoP2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloAE5" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTOTAL"
+        app:layout_constraintEnd_toEndOf="@+id/txtTituloAE5" />
 
     <ListView
         android:id="@+id/lv_MetodosP"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="291dp"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="126dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="123dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMetodoP2" />
+        app:layout_constraintTop_toTopOf="@+id/txtTotal2" />
 
     <TextView
         android:id="@+id/txtTituloAE5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="26dp"
         android:text="@string/txtTituloP"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtTotal2"
         app:layout_constraintStart_toEndOf="@+id/btn_Regresar9"
         app:layout_constraintTop_toBottomOf="@+id/btn_Regresar9" />
+
+    <TextView
+        android:id="@+id/txtTOTAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="42dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTotal2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloAE5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

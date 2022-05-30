@@ -13,11 +13,10 @@ import android.widget.Toast;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-public class MainActivity_Asesoria extends AppCompatActivity {
+public class MainActivity_Asesoria2 extends AppCompatActivity {
 
-    String materiaA, busqueda, idAsignatura, idAsesoria, idDocente, idUsuario, idPersona, Nom, apellidoP, apellidoM, costo;
+    String materiaID, busqueda, idAsignatura, idAsesoria, idDocente, idUsuario, idPersona, Nom, apellidoP, apellidoM, costo;
     private ListView lv;
     private Spinner spin;
 
@@ -34,10 +33,10 @@ public class MainActivity_Asesoria extends AppCompatActivity {
         ArrayAdapter<String> adapterSp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, horarios);
         spin.setAdapter(adapterSp);
 
-        materiaA = getIntent().getStringExtra("dato");
+        materiaID = getIntent().getStringExtra("datoID");
 
         //String asesorias [] = {materiaA+"\nASESOR: JOSE ANTONIO\nID: 123456", materiaA+"\nASESOR: BRENDA AVITIA\nID: 456789",
-                //materiaA+"\nASESOR: LEONEL VAZQUEZ\nID: 789123", materiaA+"\nASESOR: JOSE SOLIS\nID: 456721", materiaA+"\nASESOR: MARCO RODRIGUEZ\nID: 890123"};
+        //materiaA+"\nASESOR: LEONEL VAZQUEZ\nID: 789123", materiaA+"\nASESOR: JOSE SOLIS\nID: 456721", materiaA+"\nASESOR: MARCO RODRIGUEZ\nID: 890123"};
         consultarLista();
         String asesorias [] = {busqueda};
         //Sirve para modificar las caracteristicas del ListView (la clase list_item_historial vienen las caracteristicas que puse)
@@ -54,7 +53,7 @@ public class MainActivity_Asesoria extends AppCompatActivity {
 
     public void Regresar(View view) {
 
-        Intent intent = new Intent(this, MainActivity_Solicitud.class);
+        Intent intent = new Intent(this, MainActivity_AsesoriaE.class);
         startActivity(intent);
         finish();
 
@@ -64,11 +63,11 @@ public class MainActivity_Asesoria extends AppCompatActivity {
         try{
             CONEXION conex = new CONEXION();
             Statement stm = conex.conexion().createStatement();
-            ResultSet rs = stm.executeQuery("SELECT * FROM ASOESASIGNATURAS WHERE Nombre ='" + materiaA + "'");
+            ResultSet rs = stm.executeQuery("SELECT * FROM ASOESASIGNATURAS WHERE idAsignatura ='" + materiaID + "'");
             if(rs.next()){
                 idAsignatura = rs.getString(1);
             } else {
-                busqueda = ("No Hay Asesorías De " + materiaA + " Disponibles");
+                busqueda = ("No Hay Asesorías Con ID " + materiaID + " Disponibles");
             }
 
             CONEXION conex2 = new CONEXION();
@@ -113,6 +112,7 @@ public class MainActivity_Asesoria extends AppCompatActivity {
     public void Inscribirse(View view) {
 
         Intent intent = new Intent(this, MainActivity_SeleccionP.class);
+        intent.putExtra("datoID", materiaID);
         intent.putExtra("datoC", costo);
         startActivity(intent);
 

@@ -48,7 +48,6 @@ public class MainActivity_Solicitud extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity_Asesoria.class);
             intent.putExtra("dato", materia);
             startActivity(intent);
-            finish();
 
         }
     }
