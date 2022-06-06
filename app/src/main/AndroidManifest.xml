@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asoes">
         <activity
+            android:name=".EditUserInfo"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity_Asesoria2"
             android:exported="false" />
         <activity

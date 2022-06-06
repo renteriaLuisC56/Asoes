@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".UserMain">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar contraseña"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679" />
+
     <TextView
         android:id="@+id/tvAccount"
         android:layout_width="wrap_content"
@@ -175,16 +187,16 @@
         app:layout_constraintVertical_bias="0.88" />
 
     <Button
-        android:id="@+id/button13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cambiar contraseña"
+        android:id="@+id/EditUser"
+        android:layout_width="151dp"
+        android:layout_height="67dp"
+        android:text="Editar informacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.243" />
 
     <ImageView
         android:id="@+id/imageView13"

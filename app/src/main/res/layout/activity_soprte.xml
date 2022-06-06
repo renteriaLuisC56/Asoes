@@ -7,7 +7,7 @@
     tools:context=".Soprte">
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/EditUser"
         android:layout_width="78dp"
         android:layout_height="34dp"
         android:text="Aqui"

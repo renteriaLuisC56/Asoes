@@ -156,8 +156,8 @@
 
     <ImageView
         android:id="@+id/imageView28"
-        android:layout_width="296dp"
-        android:layout_height="160dp"
+        android:layout_width="170dp"
+        android:layout_height="161dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -264,6 +264,7 @@
         android:id="@+id/imageView33"
         android:layout_width="51dp"
         android:layout_height="48dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"

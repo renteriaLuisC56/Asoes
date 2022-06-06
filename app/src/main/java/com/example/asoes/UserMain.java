@@ -18,7 +18,7 @@ import java.sql.Statement;
 public class UserMain extends AppCompatActivity {
 
 //textView65 69
-    Button btn,btn1,cerrar,del;
+    Button btn,btn1,cerrar,del,edit;
     ImageView img;
     TextView Nombre,Apellidos,Correo,FechaNacimiento,Usuario,TipoUser;
 
@@ -30,7 +30,15 @@ public class UserMain extends AppCompatActivity {
 
 
 
-        btn = (Button)findViewById(R.id.button13);
+        edit = (Button)findViewById(R.id.EditUser);
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEdit();
+            }
+        });
+        btn = (Button)findViewById(R.id.button);
         btn1 = (Button)findViewById(R.id.button12);
         img = (ImageView)findViewById(R.id.imageView12);
         cerrar = (Button)findViewById(R.id.cerrar);
@@ -46,6 +54,9 @@ public class UserMain extends AppCompatActivity {
 
 
         CargarInfo();
+
+
+
 
         del.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +96,8 @@ public class UserMain extends AppCompatActivity {
         });
 
 
+
+
         }
     void cambiaPass() {
         Intent a = new Intent(this,cambiarPassword.class);
@@ -120,6 +133,11 @@ public class UserMain extends AppCompatActivity {
         Intent a = new Intent(this,EliminacionCuenta.class);
         startActivity(a);
 
+    }
+
+    void openEdit(){
+        Intent a = new Intent(this,EditUserInfo.class);
+        startActivity(a);
     }
 
     void verificarAsesorias(){

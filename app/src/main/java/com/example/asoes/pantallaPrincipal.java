@@ -110,7 +110,6 @@ public class pantallaPrincipal extends AppCompatActivity {
     public void OpenUserMenu() {
         Intent a = new Intent(this, UserMain.class);
         startActivity(a);
-        finish();
     }
 
     public void OpenAsesoriaRecomend() {
